@@ -2,96 +2,292 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Personal Trainer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impulso Academy</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<header class="nav">
-  <h2 class="logo">Trainer</h2>
-  <nav>
-    <a href="#">Inicio</a>
-    <a href="#planes">Planes</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-</header>
-
-<section class="hero reveal">
-  <div class="hero-text">
-    <h1>Transformá tu cuerpo</h1>
-    <p>Planes personalizados para lograr tu mejor versión</p>
-
-    <div class="hero-buttons">
-      <a href="#" class="btn primary">Ver planes</a>
-      <a href="#contacto" class="btn secondary">Contacto</a>
+  <!-- NAVBAR -->
+  <header class="nav" id="navbar">
+    <div class="nav-inner">
+      <div class="logo">
+        <span class="logo-icon">IA</span>
+        <span class="logo-text">Impulso <strong>Academy</strong></span>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#">Inicio</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#docentes">Docentes</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a href="#contacto" class="nav-cta">Contacto</a>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="trainer reveal">
-  <div class="trainer-container">
-    <div class="trainer-img">
-      <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-shape shape1"></div>
+    <div class="hero-bg-shape shape2"></div>
+    <div class="hero-content">
+      <span class="hero-tag reveal-fade">Academia Profesional · Corrientes, Argentina</span>
+      <h1 class="reveal-up">Formación que transforma<br><em>tu futuro profesional</em></h1>
+      <p class="hero-sub reveal-up delay-1">Cursos prácticos, docentes expertos y certificación oficial para impulsar tu carrera.</p>
+      <div class="hero-actions reveal-up delay-2">
+        <a href="#cursos" class="btn btn-primary">Explorar cursos</a>
+        <a href="#contacto" class="btn btn-outline">Hablar con un asesor</a>
+      </div>
+      <div class="hero-stats reveal-up delay-3">
+        <div class="stat"><strong>+500</strong><span>Estudiantes</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>3</strong><span>Programas</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>100%</strong><span>Certificado</span></div>
+      </div>
     </div>
-
-    <div class="trainer-text">
-      <h2>Entrenador Personal</h2>
-      <p>Más de 5 años ayudando a personas a transformar su físico.</p>
-      <a href="#planes" class="btn primary">Ver planes</a>
+    <div class="hero-image reveal-fade delay-2">
+      <div class="hero-card floating">
+        <div class="hero-card-icon">🎓</div>
+        <p>Próxima cohorte</p>
+        <strong>Mayo 2025</strong>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="plans reveal" id="planes">
-  <h2>Elegí tu plan</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <h3>Básico</h3>
-      <p class="price">$10.000</p>
-      <a href="#" class="btn primary">Comprar</a>
+  <!-- BENEFICIOS -->
+  <section class="benefits reveal" id="beneficios">
+    <div class="section-inner">
+      <div class="section-label">¿Por qué elegirnos?</div>
+      <h2 class="section-title">Una educación diseñada<br>para resultados reales</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">📋</div>
+          <h3>Clases prácticas</h3>
+          <p>Aprendizaje basado en proyectos reales desde el primer día.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">⚡</div>
+          <h3>Acceso inmediato</h3>
+          <p>Comenzá tu formación el mismo día de la inscripción.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">💬</div>
+          <h3>Soporte personalizado</h3>
+          <p>Acompañamiento directo con los docentes durante todo el curso.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🏅</div>
+          <h3>Certificado final</h3>
+          <p>Credencial reconocida para potenciar tu perfil profesional.</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="card popular">
-      <span class="badge">Más elegido</span>
-      <h3>Intermedio</h3>
-      <p class="price">$25.000</p>
-      <a href="#" class="btn primary">Comprar</a>
+  <!-- CURSOS -->
+  <section class="courses reveal" id="cursos">
+    <div class="section-inner">
+      <div class="section-label">Programas académicos</div>
+      <h2 class="section-title">Nuestros cursos</h2>
+      <p class="section-sub">Elegí el programa que más se adapta a tus objetivos y comenzá hoy.</p>
+
+      <div class="cards">
+
+        <div class="card">
+          <div class="card-badge">Más popular</div>
+          <div class="card-icon">🌐</div>
+          <h3>HTML & CSS</h3>
+          <p>Creá páginas web profesionales desde cero. Aprendé estructura, diseño y buenas prácticas.</p>
+          <ul class="card-features">
+            <li>8 semanas de cursado</li>
+            <li>Proyecto final incluido</li>
+            <li>Certificado oficial</li>
+          </ul>
+          <a href="https://tutienda.mitiendanube.com/producto/html-css" target="_blank" class="btn btn-primary btn-full">
+            Inscribirme
+          </a>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">⚙️</div>
+          <h3>JavaScript</h3>
+          <p>Dale interactividad a tus sitios web. Dominá la lógica de programación moderna.</p>
+          <ul class="card-features">
+            <li>10 semanas de cursado</li>
+            <li>Ejercicios prácticos</li>
+            <li>Certificado oficial</li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-full">Inscribirme</a>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">📈</div>
+          <h3>Marketing Digital</h3>
+          <p>Estrategias para vender online, gestionar redes sociales y hacer crecer tu negocio.</p>
+          <ul class="card-features">
+            <li>6 semanas de cursado</li>
+            <li>Casos reales</li>
+            <li>Certificado oficial</li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-full">Inscribirme</a>
+        </div>
+
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Premium</h3>
-      <p class="price">$50.000</p>
-      <a href="#" class="btn primary">Comprar</a>
+  <!-- DOCENTES -->
+  <section class="teachers reveal" id="docentes">
+    <div class="section-inner">
+      <div class="section-label">Equipo académico</div>
+      <h2 class="section-title">Nuestros docentes</h2>
+      <p class="section-sub">Profesionales con experiencia en la industria, comprometidos con tu aprendizaje.</p>
+
+      <div class="teachers-grid">
+        <div class="teacher">
+          <div class="teacher-img-wrap">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Juan Pérez">
+          </div>
+          <h3>Juan Pérez</h3>
+          <span class="teacher-role">Desarrollador Web</span>
+          <p>Especialista en frontend con más de 8 años de experiencia en proyectos internacionales.</p>
+        </div>
+
+        <div class="teacher">
+          <div class="teacher-img-wrap">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ana Gómez">
+          </div>
+          <h3>Ana Gómez</h3>
+          <span class="teacher-role">Marketing Digital</span>
+          <p>Consultora en estrategia digital y gestión de campañas para PyMEs y emprendedores.</p>
+        </div>
+
+        <div class="teacher">
+          <div class="teacher-img-wrap">
+            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Carlos Ruiz">
+          </div>
+          <h3>Carlos Ruiz</h3>
+          <span class="teacher-role">Ofimática & Excel</span>
+          <p>Instructor certificado con enfoque en productividad y automatización de procesos.</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- UBICACIÓN -->
+  <section class="location reveal" id="ubicacion">
+    <div class="section-inner">
+      <div class="section-label">Sede presencial</div>
+      <h2 class="section-title">Nuestra ubicación</h2>
+      <div class="location-container">
+        <div class="location-text">
+          <p>Contamos con clases presenciales en nuestra sede en Corrientes Capital. También ofrecemos modalidad online para que puedas aprender desde cualquier lugar.</p>
+          <div class="location-info">
+            <div class="location-item">
+              <span class="loc-icon">📍</span>
+              <div>
+                <strong>Dirección</strong>
+                <p>Corrientes Capital, Argentina</p>
+              </div>
+            </div>
+            <div class="location-item">
+              <span class="loc-icon">🕐</span>
+              <div>
+                <strong>Horario de atención</strong>
+                <p>Lun–Vie: 09:00–18:00 · Sáb: 09:00–13:00</p>
+              </div>
+            </div>
+          </div>
+          <a href="https://www.google.com/maps?q=Corrientes+Argentina" target="_blank" class="btn btn-outline">Ver en Google Maps</a>
+        </div>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps?q=Corrientes+Argentina&output=embed"
+            width="100%" height="340" style="border:0;" allowfullscreen loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section class="contact reveal" id="contacto">
-  <h2>Contacto</h2>
+  <!-- CONTACTO -->
+  <section class="contact reveal" id="contacto">
+    <div class="section-inner contact-inner">
+      <div class="section-label">Estamos para ayudarte</div>
+      <h2 class="section-title">Contactanos</h2>
+      <p class="section-sub">¿Tenés dudas sobre algún curso? Escribinos y te respondemos a la brevedad.</p>
+      <div class="contact-buttons">
+        <a href="https://wa.me/5493794000000" target="_blank" class="btn-contact whatsapp">
+          <span class="contact-icon">💬</span>
+          <div>
+            <strong>WhatsApp</strong>
+            <small>Respuesta inmediata</small>
+          </div>
+        </a>
+        <a href="https://instagram.com/impulsoacademy" target="_blank" class="btn-contact instagram">
+          <span class="contact-icon">📸</span>
+          <div>
+            <strong>Instagram</strong>
+            <small>@impulsoacademy</small>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
 
-  <div class="contact-buttons">
-    <a href="#" class="whatsapp">WhatsApp</a>
-    <a href="#" class="instagram">Instagram</a>
-  </div>
-</section>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="logo">
+        <span class="logo-icon">IA</span>
+        <span class="logo-text">Impulso <strong>Academy</strong></span>
+      </div>
+      <p>© 2025 Impulso Academy · Corrientes, Argentina · Todos los derechos reservados.</p>
+      <nav class="footer-links">
+        <a href="#">Inicio</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </footer>
 
-<script>
-  const reveals = document.querySelectorAll(".reveal");
+  <script>
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal, .reveal-fade, .reveal-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(el => {
+        if (el.isIntersecting) {
+          el.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
 
-  window.addEventListener("scroll", () => {
-    reveals.forEach(el => {
-      const top = el.getBoundingClientRect().top;
-      if (top < window.innerHeight - 100) {
-        el.classList.add("active");
-      }
+    // Nav scroll
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
     });
-  });
-</script>
+
+    // Mobile menu
+    document.getElementById('menuToggle').addEventListener('click', function () {
+      document.getElementById('navLinks').classList.toggle('open');
+      this.classList.toggle('active');
+    });
+
+    // Close menu on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('open');
+        document.getElementById('menuToggle').classList.remove('active');
+      });
+    });
+  </script>
 
 </body>
+</html>
